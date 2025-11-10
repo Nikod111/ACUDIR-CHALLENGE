@@ -1,0 +1,12 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Acudir.Challenge/.vs
+/Acudir.Challenge/Acudir.Api/bin/Debug/net8.0
+/Acudir.Challenge/Acudir.Api/obj
+/Acudir.Challenge/Acudir.Domain/bin/Debug/net8.0
+/Acudir.Challenge/Acudir.Domain/obj
+/Acudir.Challenge/Acudir.Infrastructure/bin/Debug/net8.0
+/Acudir.Challenge/Acudir.Infrastructure/obj
