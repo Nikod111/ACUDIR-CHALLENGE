@@ -14,6 +14,8 @@ Iniciar Visual Studio, levantar **Acudir.Api**
 
 Si no inicia el proyecto **Acudir.Web**, ejecutar por consola en el directorio `Acudir.Web`
 
+**npm install @vitejs/plugin-react --save-dev**
+
 **npm run dev**
 
 ## Arquitectura
