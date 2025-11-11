@@ -7,6 +7,9 @@ Aplicación web en **.NET 8** (frontend a elección) para gestionar y
 filtrar registros de personas almacenados en `Test.json` mediante una
 API RESTful.
 
+## Implementación
+Para el funcionamiento de la App se precisa que el archivo `Acudir.Infrastructure\Data\Test.json` se encuentre en _"C:\Temp\"_
+
 ## Arquitectura
 
 -   **Dominio**: Modelo `Persona` basado en `Test.json`.
