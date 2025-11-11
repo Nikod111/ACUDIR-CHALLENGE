@@ -44,32 +44,32 @@ export default function Personas() {
                     placeholder="Filtrar por nombre"
                     value={nombreFiltro}
                     onChange={(e) => setNombreFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded"
+                    className="flex-1 p-2 border rounded mx-2"
                 />
                 <input
                     type="text"
                     placeholder="Filtrar por apellido"
                     value={apellidoFiltro}
                     onChange={(e) => setApellidoFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded"
+                    className="flex-1 p-2 border rounded mx-2"
                 />
                 <input
                     type="number"
                     placeholder="Filtrar por edad"
                     value={edadFiltro}
                     onChange={(e) => setEdadFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded"
+                    className="flex-1 p-2 border rounded mx-2"
                 />
                 <input
                     type="email"
                     placeholder="Filtrar por mail"
                     value={mailFiltro}
                     onChange={(e) => setMailFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded"
+                    className="flex-1 p-2 border rounded mx-2"
                 />
                 <button
                     onClick={obtenerPersonas}
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 rounded"
+                    className="btn btn-primary"
                 >
                     Buscar
                 </button>
@@ -77,7 +77,7 @@ export default function Personas() {
 
             {/* Tabla */}
             <div className="bg-white shadow-lg rounded-lg w-full max-w-4xl">
-                <table className="min-w-full table-auto">
+                <table className="min-w-full table-auto mt-3">
                     <thead className="bg-blue-600 text-black">
                         <tr>
                             <th className="py-3 px-4">ID</th>
@@ -98,7 +98,7 @@ export default function Personas() {
                                 <td className="py-3 px-4">
                                 <Link
                                     to={`/EditarPersona/${p.id}/${p.nombre}/${p.apellido}/${p.email}/${p.edad}`}
- 
+                                        className="btn btn-success"
                                 >
                                     Editar
                                     </Link>
