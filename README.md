@@ -9,6 +9,9 @@ API RESTful.
 
 ## Implementación
 Para el funcionamiento de la App se precisa que el archivo `Acudir.Infrastructure\Data\Test.json` se encuentre en _"C:\Temp\"_
+Iniciar Visual Studio, levantar **Acudir.Api**
+Si no inicia el proyecto **Acudir.Web**, ejecutar por consola en `Acudir.Web`
+**npm run dev**
 
 ## Arquitectura
 
