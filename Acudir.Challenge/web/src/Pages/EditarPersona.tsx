@@ -56,7 +56,7 @@ export default function EditarPersona() {
             if (response.ok) {
                 alert("✅ Persona modificada con exito!");
             } else {
-                alert("❌ Error al agregar persona");
+                alert("❌ Error al modificar persona");
             }
 
         } catch (err) {
