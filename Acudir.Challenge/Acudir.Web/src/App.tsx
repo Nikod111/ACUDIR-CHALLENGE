@@ -20,7 +20,13 @@ function App() {
                     element={<EditarPersona />}
                 />
             </Routes>
+
+            <footer style={{ textAlign: 'center', marginTop: '2rem', padding: '1rem', background: '#f9f9f9' }}>
+                💻 Desarrollado por Nicolás Domínguez
+            </footer>
+
         </Router>
+
     );
 }
 
