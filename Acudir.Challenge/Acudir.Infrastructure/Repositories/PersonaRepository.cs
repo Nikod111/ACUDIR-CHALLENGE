@@ -30,12 +30,18 @@ namespace Acudir.Infrastructure.Repositories
                 var property = typeof(Persona).GetProperty(propertyName,
                     BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
 
-                if (property != null && property.PropertyType == typeof(string))
+                if (property != null) // && property.PropertyType == typeof(string)
                 {
                     resultado = resultado
                         .Where(p => {
-                            var value = (string)property.GetValue(p);
-                            return value != null && value.Contains(filterValue, StringComparison.OrdinalIgnoreCase);
+                            var rawValue = property.GetValue(p);
+
+                            if (rawValue == null) return false;
+
+                            // Convertir siempre a string
+                            var valueStr = rawValue.ToString();
+
+                            return valueStr.Contains(filterValue, StringComparison.OrdinalIgnoreCase);
                         })
                         .ToList();
                 }

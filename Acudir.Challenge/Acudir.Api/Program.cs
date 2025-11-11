@@ -14,6 +14,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPersonaRepository, PersonaRepository>();
 builder.Services.AddScoped<PersonaService>();
 
+var MyCorsPolicy = "_myCorsPolicy";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(MyCorsPolicy, policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(MyCorsPolicy);
 
 app.UseHttpsRedirection();
 

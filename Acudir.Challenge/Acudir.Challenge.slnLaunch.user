@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "Acudir.Api\\Acudir.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Web\\Acudir.Web.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
