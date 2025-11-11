@@ -54,19 +54,20 @@ export default function Personas() {
                     className="flex-1 p-2 border rounded mx-2"
                 />
                 <input
-                    type="number"
-                    placeholder="Filtrar por edad"
-                    value={edadFiltro}
-                    onChange={(e) => setEdadFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded mx-2"
-                />
-                <input
                     type="email"
                     placeholder="Filtrar por mail"
                     value={mailFiltro}
                     onChange={(e) => setMailFiltro(e.target.value)}
                     className="flex-1 p-2 border rounded mx-2"
                 />
+                <input
+                    type="number"
+                    placeholder="Filtrar por edad"
+                    value={edadFiltro}
+                    onChange={(e) => setEdadFiltro(e.target.value)}
+                    className="flex-1 p-2 border rounded mx-2"
+                />
+
                 <button
                     onClick={obtenerPersonas}
                     className="btn btn-primary"
