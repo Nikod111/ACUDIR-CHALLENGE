@@ -123,14 +123,14 @@ export default function AgregarPersona() {
 
               <Link
                   to="/"
-                  className="btn btn-secondary font-bold py-2 px-4 rounded mx-3"
+                  className="btn btn-secondary font-bold py-2 px-4 rounded mx-3 mb-2"
               >
                   Volver
               </Link>
 
               <button
                   type="submit"
-                  className="btn btn-primary py-2"
+                  className="btn btn-primary py-2 mb-2"
               >
                   Guardar
               </button>
