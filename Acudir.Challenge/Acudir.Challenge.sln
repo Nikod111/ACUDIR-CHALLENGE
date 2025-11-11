@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acudir.Domain", "Acudir.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acudir.Infrastructure", "Acudir.Infrastructure\Acudir.Infrastructure.csproj", "{A1CC175A-A073-4396-AA1F-2E8E152FAE11}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Acudir.Web", "Web\Acudir.Web.esproj", "{7D128133-D57F-C939-CFF4-334A9B8DF362}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Acudir.Web", "Acudir.Web\Acudir.Web.esproj", "{7D128133-D57F-C939-CFF4-334A9B8DF362}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
