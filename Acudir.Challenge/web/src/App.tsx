@@ -15,6 +15,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<Personas />} />
                 <Route path="/agregar" element={<AgregarPersona />} />
+                <Route
+                    path="/EditarPersona/:id/:nombre/:apellido/:email/:edad"
+                    element={<EditarPersona />}
+                />
             </Routes>
         </Router>
     );

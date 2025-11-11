@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Personas() {
     const [personas, setPersonas] = useState([]);
@@ -34,7 +35,7 @@ export default function Personas() {
 
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center p-10">
-            <h1 className="text-3xl font-bold mb-8 text-blue-600">Lista de Personas</h1>
+            <h1 className="text-3xl font-bold my-5">Listado de Personas</h1>
 
             {/* Filtros */}
             <div className="mb-6 w-full max-w-4xl flex flex-wrap gap-4">
@@ -94,6 +95,14 @@ export default function Personas() {
                                 <td className="py-3 px-4">{p.apellido}</td>
                                 <td className="py-3 px-4">{p.email}</td>
                                 <td className="py-3 px-4">{p.edad}</td>
+                                <td className="py-3 px-4">
+                                <Link
+                                    to={`/EditarPersona/${p.id}/${p.nombre}/${p.apellido}/${p.email}/${p.edad}`}
+ 
+                                >
+                                    Editar
+                                    </Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
