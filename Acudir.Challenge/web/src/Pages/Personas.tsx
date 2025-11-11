@@ -34,7 +34,7 @@ export default function Personas() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-10">
+        <div className="min-h-screen flex flex-col items-center p-10">
             <h1 className="text-3xl font-bold my-5">Listado de Personas</h1>
 
             {/* Filtros */}
@@ -76,21 +76,21 @@ export default function Personas() {
             </div>
 
             {/* Tabla */}
-            <div className="bg-white shadow-lg rounded-lg w-full max-w-4xl">
+            <div className="bg-white shadow-lg rounded-lg w-full max-w-4xl mt-3">
                 <table className="min-w-full table-auto mt-3">
-                    <thead className="bg-blue-600 text-black">
+                    <thead className="text-black">
                         <tr>
-                            <th className="py-3 px-4">ID</th>
-                            <th className="py-3 px-4">Nombre</th>
-                            <th className="py-3 px-4">Apellido</th>
-                            <th className="py-3 px-4">Email</th>
-                            <th className="py-3 px-4">Edad</th>
+                            <th className="hidden">ID</th>
+                            <th className="">Nombre</th>
+                            <th className="">Apellido</th>
+                            <th className="">Email</th>
+                            <th className="">Edad</th>
                         </tr>
                     </thead>
                     <tbody>
                         {personas.map((p) => (
                             <tr key={p.id} className="border-b hover:bg-gray-100">
-                                <td className="py-3 px-4">{p.id}</td>
+                                <td className="py-3 px-4 hidden">{p.id}</td>
                                 <td className="py-3 px-4">{p.nombre}</td>
                                 <td className="py-3 px-4">{p.apellido}</td>
                                 <td className="py-3 px-4">{p.email}</td>

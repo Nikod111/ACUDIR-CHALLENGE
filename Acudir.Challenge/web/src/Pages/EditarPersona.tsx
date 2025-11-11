@@ -1,5 +1,6 @@
-﻿import { useParams } from "react-router-dom";
+﻿import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function EditarPersona() {
 
@@ -80,70 +81,67 @@ export default function EditarPersona() {
                     value={form.id}
                 />
 
-                <div>
-                    <label htmlFor="nombre" className="block text-sm font-medium mb-1">
-                        Nombre
-                    </label>
-                </div>
-                <div>
-                    <input
-                        id="nombre"
-                        name="nombre"
-                        className="block w-full p-2 border rounded"
-                        value={form.nombre}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
+                <label htmlFor="nombre" className="block text-sm font-medium mb-1">
+                    Nombre
+                </label>
 
-                <div>
-                    <label htmlFor="apellido" className="block text-sm font-medium mb-1">
-                        Apellido
-                    </label>
-                </div>
-                <div>
-                    <input
-                        id="apellido"
-                        name="apellido"
-                        className="block w-full p-2 border rounded"
-                        value={form.apellido}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
+                <input
+                    id="nombre"
+                    name="nombre"
+                    className="block w-1/4 mx-auto p-2 border rounded"
+                    value={form.nombre}
+                    onChange={handleChange}
+                    required
+                />
 
-                <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
-                        Email
-                    </label>
-                </div>
-                <div>
-                    <input
-                        id="email"
-                        name="email"
-                        className="block w-full p-2 border rounded"
-                        value={form.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
+    
+                <label htmlFor="apellido" className="block text-sm font-medium mb-1">
+                    Apellido
+                </label>
 
-                <div>
-                    <label htmlFor="edad" className="block text-sm font-medium mb-1">
-                        Edad
-                    </label>
-                </div>
-                <div>
-                    <input
-                        id="edad"
-                        name="edad"
-                        type="number"
-                        className="block w-full p-2 border rounded mb-3"
-                        value={form.edad}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
+                <input
+                    id="apellido"
+                    name="apellido"
+                    className="block w-1/4 mx-auto p-2 border rounded"
+                    value={form.apellido}
+                    onChange={handleChange}
+                    required
+                />
+
+                <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    className="block w-1/4 mx-auto p-2 border rounded"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                />
+ 
+                <label htmlFor="edad" className="block text-sm font-medium mb-1">
+                    Edad
+                </label>
+
+                <input
+                    id="edad"
+                    name="edad"
+                    type="number"
+                    className="block w-1/4 mx-auto p-2 border rounded mb-3"
+                    value={form.edad}
+                    onChange={handleChange}
+                    required
+                />
+
+
+                <Link
+                    to="/"
+                    className="btn btn-secondary font-bold py-2 px-4 rounded mx-3"
+                >
+                    Volver
+                </Link>
 
                 <button
                     type="submit"
@@ -151,6 +149,8 @@ export default function EditarPersona() {
                 >
                     Guardar
                 </button>
+
+
             </form>
         </div>
 
