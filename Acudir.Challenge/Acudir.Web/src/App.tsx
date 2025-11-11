@@ -8,8 +8,8 @@ function App() {
     return (
         <Router>
             <nav style={{ padding: '1rem', background: '#eee' }}>
-                <Link to="/" style={{ marginRight: '1rem' }}>Personas</Link>
-                <Link to="/agregar">Agregar Persona</Link>
+                <Link to="/" style={{ marginRight: '1rem' }} className="no-underline">🧑 Personas</Link>
+                <Link to="/agregar" className="no-underline">➕ Agregar Persona</Link>
             </nav>
 
             <Routes>
