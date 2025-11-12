@@ -10,13 +10,13 @@ API RESTful.
 ## Implementación
 Para el funcionamiento de la App se precisa que el archivo `Acudir.Infrastructure\Data\Test.json` se encuentre en _"C:\Temp\"_
 
-Iniciar Visual Studio, levantar **Acudir.Api**
+Iniciar Visual Studio, click derecho en la solución **Acudir.Challenge** -> Configurar proyectos de inicio y seleccionar:
 
-Si no inicia el proyecto **Acudir.Web**, ejecutar por consola en el directorio `Acudir.Web`
+**Acudir.Api**
 
-**npm install @vitejs/plugin-react --save-dev**
+**Acudir.Web** (React)
 
-**npm run dev**
+Luego **Iniciar**
 
 ## Arquitectura
 
