@@ -68,6 +68,21 @@ namespace Acudir.Infrastructure.Repositories
                 File.WriteAllText(_filePath, JsonConvert.SerializeObject(personas));
             }
         }
+
+        public void Delete(int id)
+        {
+            var personas = JsonConvert.DeserializeObject<List<Persona>>(File.ReadAllText(_filePath))
+                           ?? new List<Persona>();
+
+            var persona = personas.FirstOrDefault(p => p.Id == id);
+
+            if (persona != null)
+            {
+                personas.Remove(persona);
+                File.WriteAllText(_filePath, JsonConvert.SerializeObject(personas));
+            }
+        }
+
     }
 
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Personas() {
@@ -13,7 +13,7 @@ export default function Personas() {
     const [dniFiltro, setDniFiltro] = useState("");
 
     const obtenerPersonas = () => {
-        // Construir query string din�micamente
+        // Construir query string dinámicamente
         const params = new URLSearchParams();
         if (nombreFiltro) params.append("nombre", nombreFiltro);
         if (apellidoFiltro) params.append("apellido", apellidoFiltro);
@@ -36,6 +36,27 @@ export default function Personas() {
     useEffect(() => {
         obtenerPersonas();
     }, []);
+
+    const handleDelete = async (id) => {
+        if (!window.confirm("¿Seguro que deseas eliminar esta persona?")) return;
+
+        try {
+            const response = await fetch(`https://localhost:7259/Persona/${id}`, {
+                method: "DELETE"
+            });
+
+            if (response.ok) {
+                alert("✅ Persona eliminada");
+                obtenerPersonas(); // recargar la lista
+            } else {
+                alert("❌ Error al eliminar persona");
+            }
+        } catch (err) {
+            alert("⚠️ Error de conexión con la API");
+            console.error(err);
+        }
+    };
+
 
     return (
         <div className="min-h-screen flex flex-col items-center p-10">
@@ -129,7 +150,13 @@ export default function Personas() {
                                         className="btn btn-success"
                                 >
                                     Editar
-                                    </Link>
+                                </Link>
+                                <button
+                                    className="btn btn-danger mx-2"
+                                    onClick={() => handleDelete(p.id)}
+                                >
+                                    Borrar
+                                </button>
                                 </td>
                             </tr>
                         ))}

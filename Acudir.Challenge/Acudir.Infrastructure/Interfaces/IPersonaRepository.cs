@@ -12,5 +12,6 @@ namespace Acudir.Infrastructure.Interfaces
         IEnumerable<Persona> GetAll(Dictionary<string, string> filters);
         void Add(Persona persona);
         void Update(Persona persona);
+        void Delete(int id);
     }
 }

@@ -38,6 +38,15 @@ namespace Acudir.Api.Controllers
             _service.Update(persona);
             return Ok();
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            _service.Delete(id);
+            return Ok();
+        }
+
     }
 
 }
