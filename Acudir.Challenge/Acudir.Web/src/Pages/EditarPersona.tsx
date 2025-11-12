@@ -154,6 +154,11 @@ export default function EditarPersona() {
                     onChange={handleChange}
                     required
                     maxLength={3}
+                    onKeyPress={(e) => {
+                        if (!/[0-9]/.test(e.key)) {
+                            e.preventDefault();
+                        }
+                    }}
                 />
 
                 <label htmlFor="dni" className="block text-sm font-medium mb-1">
@@ -169,6 +174,11 @@ export default function EditarPersona() {
                     onChange={handleChange}
                     required
                     maxLength={8}
+                    onKeyPress={(e) => {
+                        if (!/[0-9]/.test(e.key)) {
+                            e.preventDefault();
+                        }
+                    }}
                 />
 
                 <label htmlFor="genero" className="block text-sm font-medium mb-1">
