@@ -2,12 +2,14 @@
 import { Link } from "react-router-dom";
 
 export default function AgregarPersona() {
-  const [form, setForm] = useState({
-    nombre: "",
-    apellido: "",
-    email: "",
-    edad: ""
-  });
+    const [form, setForm] = useState({
+        nombre: "",
+        apellido: "",
+        email: "",
+        edad: "",
+        dni: "",
+        genero: ""
+    });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
@@ -20,23 +22,37 @@ export default function AgregarPersona() {
     e.preventDefault();
 
     const persona = {
-      id: 0,
-      nombre: form.nombre,
-      apellido: form.apellido,
-      email: form.email,
-      edad: Number(form.edad)
+        id: 0,
+        nombre: form.nombre,
+        apellido: form.apellido,
+        email: form.email,
+        edad: Number(form.edad),
+        dni: Number(form.dni),
+        genero: form.genero
     };
 
     if (persona.edad < 18) {
         alert("⚠️ La persona debe ser mayor de 18 años");
         return;
-      }
+    }
 
     // Validación de email
-      if (!persona.email.includes("@") || !persona.email.includes(".")) {
-          alert("⚠️ El email debe ser válido (debe contener '@' y '.')");
-          return;
+    if (!persona.email.includes("@") || !persona.email.includes(".")) {
+        alert("⚠️ El email debe ser válido (debe contener '@' y '.')");
+        return;
       }
+
+    if (persona.dni < 1000000 || persona.dni > 99999999) {
+      alert("⚠️ El DNI debe ser un número válido de 7 u 8 dígitos");
+      return;
+    }
+
+    // Género obligatorio
+    if (!["M", "F", "X"].includes(persona.genero)) {
+      alert("⚠️ El género debe ser M, F o X");
+      return;
+    }
+
 
     try {
       const response = await fetch("https://localhost:7259/Persona", {
@@ -49,7 +65,7 @@ export default function AgregarPersona() {
 
       if (response.ok) {
         alert("✅ Persona agregada!");
-        setForm({ nombre: "", apellido: "", email: "", edad: "" });
+          setForm({ nombre: "", apellido: "", email: "", edad: "", dni: "", genero: "" });
       } else {
         alert("❌ Error al agregar persona");
       }
@@ -120,6 +136,39 @@ export default function AgregarPersona() {
                     onChange={handleChange}
                     required
               />
+
+              <label htmlFor="dni" className="block text-sm font-medium mb-1">
+                  DNI
+              </label>
+              <input
+                  id="dni"
+                  name="dni"
+                  type="number"
+                  className="block w-1/4 mx-auto p-2 border rounded"
+                  value={form.dni}
+                  onChange={handleChange}
+                  required
+              />
+
+              <label htmlFor="genero" className="block text-sm font-medium mb-1">
+                  Género (M / F / X)
+              </label>
+              <select
+                  id="genero"
+                  name="genero"
+                  className="block w-1/4 mx-auto p-2 border rounded mb-3"
+                  value={form.genero}
+                  onChange={(e) =>
+                      setForm({ ...form, genero: e.target.value.toUpperCase() })
+                  }
+                  required
+              >
+                  <option value="">Seleccionar</option>
+                  <option value="M">M</option>
+                  <option value="F">F</option>
+                  <option value="X">X</option>
+              </select>
+
 
               <Link
                   to="/"

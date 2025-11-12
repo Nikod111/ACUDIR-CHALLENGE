@@ -19,5 +19,12 @@ namespace Acudir.Api.Domain.Models
         [Required(ErrorMessage = "La edad es obligatoria.")]
         [Range(18, int.MaxValue, ErrorMessage = "Debe ser mayor o igual a 18 años.")]
         public int Edad { get; set; }
+
+        [Required(ErrorMessage = "El DNI es obligatorio.")]
+        public int DNI { get; set; }
+
+        [Required(ErrorMessage = "El género es obligatorio.")]
+        [RegularExpression("^[MFXmfx]$", ErrorMessage = "El género debe ser M, F o X.")]
+        public string Genero { get; set; }
     }
 }

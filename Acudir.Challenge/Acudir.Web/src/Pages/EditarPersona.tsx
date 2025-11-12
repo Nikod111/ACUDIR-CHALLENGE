@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function EditarPersona() {
 
 
-    const { id, nombre, apellido, email, edad } = useParams();
+    const { id, nombre, apellido, email, edad, dni, genero } = useParams();
     // {id}
 
     const [form, setForm] = useState({
@@ -13,7 +13,9 @@ export default function EditarPersona() {
         nombre,
         apellido,
         email,
-        edad
+        edad,
+        dni,
+        genero
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +33,9 @@ export default function EditarPersona() {
             nombre: form.nombre,
             apellido: form.apellido,
             email: form.email,
-            edad: Number(form.edad)
+            edad: Number(form.edad),
+            dni: Number(form.dni),
+            genero: form.genero
         };
 
         if (persona.edad < 18) {
@@ -42,6 +46,18 @@ export default function EditarPersona() {
         // Validación de email
         if (!persona.email.includes("@") || !persona.email.includes(".")) {
             alert("⚠️ El email debe ser válido (debe contener '@' y '.')");
+            return;
+        }
+
+
+        if (persona.dni < 1000000 || persona.dni > 99999999) {
+            alert("⚠️ El DNI debe ser un número válido de 7 u 8 dígitos");
+            return;
+        }
+
+        // Género obligatorio
+        if (!["M", "F", "X"].includes(persona.genero)) {
+            alert("⚠️ El género debe ser M, F o X");
             return;
         }
 
@@ -135,6 +151,37 @@ export default function EditarPersona() {
                     required
                 />
 
+                <label htmlFor="dni" className="block text-sm font-medium mb-1">
+                    DNI
+                </label>
+                <input
+                    id="dni"
+                    name="dni"
+                    type="number"
+                    className="block w-1/4 mx-auto p-2 border rounded"
+                    value={form.dni}
+                    onChange={handleChange}
+                    required
+                />
+
+                <label htmlFor="genero" className="block text-sm font-medium mb-1">
+                    Género (M / F / X)
+                </label>
+                <select
+                    id="genero"
+                    name="genero"
+                    className="block w-1/4 mx-auto p-2 border rounded mb-3"
+                    value={form.genero}
+                    onChange={(e) =>
+                        setForm({ ...form, genero: e.target.value.toUpperCase() })
+                    }
+                    required
+                >
+                    <option value="">Seleccionar</option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                    <option value="X">X</option>
+                </select>
 
                 <Link
                     to="/"

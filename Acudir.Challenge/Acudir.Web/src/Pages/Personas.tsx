@@ -9,6 +9,8 @@ export default function Personas() {
     const [apellidoFiltro, setApellidoFiltro] = useState("");
     const [edadFiltro, setEdadFiltro] = useState("");
     const [mailFiltro, setMailFiltro] = useState("");
+    const [sexoFiltro, setSexoFiltro] = useState("");
+    const [dniFiltro, setDniFiltro] = useState("");
 
     const obtenerPersonas = () => {
         // Construir query string dinámicamente
@@ -17,6 +19,8 @@ export default function Personas() {
         if (apellidoFiltro) params.append("apellido", apellidoFiltro);
         if (edadFiltro) params.append("edad", edadFiltro);
         if (mailFiltro) params.append("email", mailFiltro);
+        if (sexoFiltro) params.append("genero", sexoFiltro);
+        if (dniFiltro) params.append("dni", dniFiltro);
 
         const url =
             params.toString().length > 0
@@ -68,6 +72,25 @@ export default function Personas() {
                     className="flex-1 p-2 border rounded mx-2"
                 />
 
+                <input
+                    type="number"
+                    placeholder="Filtrar por DNI"
+                    value={dniFiltro}
+                    onChange={(e) => setDniFiltro(e.target.value)}
+                    className="flex-1 p-2 border rounded mx-2"
+                />
+
+                <select
+                    value={sexoFiltro}
+                    onChange={(e) => setSexoFiltro(e.target.value)}
+                    className="flex-1 p-2 border rounded mx-2"
+                >
+                    <option value="">Genero</option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                    <option value="X">X</option>
+                </select>
+
                 <button
                     onClick={obtenerPersonas}
                     className="btn btn-primary"
@@ -86,6 +109,8 @@ export default function Personas() {
                             <th className="">Apellido</th>
                             <th className="">Email</th>
                             <th className="">Edad</th>
+                            <th className="">DNI</th>
+                            <th className="">Genero</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -96,9 +121,11 @@ export default function Personas() {
                                 <td className="py-3 px-4">{p.apellido}</td>
                                 <td className="py-3 px-4">{p.email}</td>
                                 <td className="py-3 px-4">{p.edad}</td>
+                                <td className="py-3 px-4">{p.dni}</td>
+                                <td className="py-3 px-4">{p.genero}</td>
                                 <td className="py-3 px-4">
                                 <Link
-                                    to={`/EditarPersona/${p.id}/${p.nombre}/${p.apellido}/${p.email}/${p.edad}`}
+                                        to={`/EditarPersona/${p.id}/${p.nombre}/${p.apellido}/${p.email}/${p.edad}/${p.dni}/${p.genero}`}
                                         className="btn btn-success"
                                 >
                                     Editar

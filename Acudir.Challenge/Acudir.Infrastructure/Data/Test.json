@@ -1,1 +1,272 @@
-[{"Id":1,"Nombre":"Juan","Apellido":"Pérez","Email":"juan.perez@example.com","Edad":30},{"Id":2,"Nombre":"Ana","Apellido":"Gómez","Email":"ana.gomez@example.com","Edad":25},{"Id":3,"Nombre":"Luis","Apellido":"Martínez","Email":"luis.martinez@example.com","Edad":40},{"Id":4,"Nombre":"María","Apellido":"Rodríguez","Email":"maria.rodriguez@example.com","Edad":28},{"Id":5,"Nombre":"Carlos","Apellido":"Fernández","Email":"carlos.fernandez@example.com","Edad":35},{"Id":6,"Nombre":"Laura","Apellido":"López","Email":"laura.lopez@example.com","Edad":32},{"Id":7,"Nombre":"Pedro","Apellido":"Ramírez","Email":"pedro.ramirez@example.com","Edad":45},{"Id":8,"Nombre":"Sofía","Apellido":"Torres","Email":"sofia.torres@example.com","Edad":22},{"Id":9,"Nombre":"Diego","Apellido":"Sánchez","Email":"diego.sanchez@example.com","Edad":38},{"Id":10,"Nombre":"Valentina","Apellido":"Castro","Email":"valentina.castro@example.com","Edad":27},{"Id":11,"Nombre":"Martín","Apellido":"Vega","Email":"martin.vega@example.com","Edad":33},{"Id":12,"Nombre":"Camila","Apellido":"Silva","Email":"camila.silva@example.com","Edad":29},{"Id":13,"Nombre":"Javier","Apellido":"Molina","Email":"javier.molina@example.com","Edad":41},{"Id":14,"Nombre":"Lucía","Apellido":"Ríos","Email":"lucia.rios@example.com","Edad":26},{"Id":15,"Nombre":"Andrés","Apellido":"Cruz","Email":"andres.cruz@example.com","Edad":36},{"Id":16,"Nombre":"Paula","Apellido":"Ortiz","Email":"paula.ortiz@example.com","Edad":31},{"Id":17,"Nombre":"Fernando","Apellido":"Navarro","Email":"fernando.navarro@example.com","Edad":39},{"Id":18,"Nombre":"Isabel","Apellido":"Aguilar","Email":"isabel.aguilar@example.com","Edad":24},{"Id":19,"Nombre":"Ricardo","Apellido":"Mendoza","Email":"ricardo.mendoza@example.com","Edad":42},{"Id":20,"Nombre":"Carolina","Apellido":"Delgado","Email":"carolina.delgado@example.com","Edad":34},{"Id":21,"Nombre":"Sebastián","Apellido":"Reyes","Email":"sebastian.reyes@example.com","Edad":37},{"Id":22,"Nombre":"Natalia","Apellido":"Morales","Email":"natalia.morales@example.com","Edad":23},{"Id":23,"Nombre":"Hugo","Apellido":"Guerrero","Email":"hugo.guerrero@example.com","Edad":46},{"Id":24,"Nombre":"Mónica","Apellido":"Campos","Email":"monica.campos@example.com","Edad":30},{"Id":25,"Nombre":"Tomás","Apellido":"Peña","Email":"tomas.pena@example.com","Edad":28},{"Id":26,"Nombre":"Daniela","Apellido":"Arias","Email":"daniela.arias@example.com","Edad":35},{"Id":27,"Nombre":"Esteban","Apellido":"Herrera","Email":"esteban.herrera@example.com","Edad":43},{"Id":28,"Nombre":"Florencia","Apellido":"Cabrera","Email":"florencia.cabrera@example.com","Edad":27},{"Id":29,"Nombre":"Gustavo","Apellido":"León","Email":"gustavo.leon@example.com","Edad":31},{"Id":30,"Nombre":"Verónica","Apellido":"Salazar","Email":"veronica.salazar@example.com","Edad":29}]
+[
+  {
+    "Id": 1,
+    "Nombre": "Nicolas",
+    "Apellido": "Dominguez",
+    "Email": "nicolas.dominguez1@example.com",
+    "Edad": 33,
+    "DNI": 40695887,
+    "Genero": "M"
+  },
+  {
+    "Id": 2,
+    "Nombre": "Lucia",
+    "Apellido": "Gomez",
+    "Email": "lucia.gomez@example.com",
+    "Edad": 28,
+    "DNI": 39845621,
+    "Genero": "F"
+  },
+  {
+    "Id": 3,
+    "Nombre": "Martin",
+    "Apellido": "Rojas",
+    "Email": "martin.rojas@example.com",
+    "Edad": 40,
+    "DNI": 32547896,
+    "Genero": "M"
+  },
+  {
+    "Id": 4,
+    "Nombre": "Florencia",
+    "Apellido": "Perez",
+    "Email": "florencia.perez@example.com",
+    "Edad": 25,
+    "DNI": 42689745,
+    "Genero": "F"
+  },
+  {
+    "Id": 5,
+    "Nombre": "Agustin",
+    "Apellido": "Lopez",
+    "Email": "agustin.lopez@example.com",
+    "Edad": 31,
+    "DNI": 37852149,
+    "Genero": "M"
+  },
+  {
+    "Id": 6,
+    "Nombre": "Camila",
+    "Apellido": "Herrera",
+    "Email": "camila.herrera@example.com",
+    "Edad": 29,
+    "DNI": 41526389,
+    "Genero": "F"
+  },
+  {
+    "Id": 7,
+    "Nombre": "Javier",
+    "Apellido": "Sosa",
+    "Email": "javier.sosa@example.com",
+    "Edad": 35,
+    "DNI": 36489715,
+    "Genero": "M"
+  },
+  {
+    "Id": 8,
+    "Nombre": "Mariana",
+    "Apellido": "Diaz",
+    "Email": "mariana.diaz@example.com",
+    "Edad": 23,
+    "DNI": 43865214,
+    "Genero": "F"
+  },
+  {
+    "Id": 9,
+    "Nombre": "Pablo",
+    "Apellido": "Silva",
+    "Email": "pablo.silva@example.com",
+    "Edad": 38,
+    "DNI": 33789451,
+    "Genero": "M"
+  },
+  {
+    "Id": 10,
+    "Nombre": "Valentina",
+    "Apellido": "Acosta",
+    "Email": "valentina.acosta@example.com",
+    "Edad": 21,
+    "DNI": 44987521,
+    "Genero": "F"
+  },
+  {
+    "Id": 11,
+    "Nombre": "Santiago",
+    "Apellido": "Ramirez",
+    "Email": "santiago.ramirez@example.com",
+    "Edad": 36,
+    "DNI": 35214587,
+    "Genero": "M"
+  },
+  {
+    "Id": 12,
+    "Nombre": "Carla",
+    "Apellido": "Mendez",
+    "Email": "carla.mendez@example.com",
+    "Edad": 27,
+    "DNI": 42258963,
+    "Genero": "F"
+  },
+  {
+    "Id": 13,
+    "Nombre": "Federico",
+    "Apellido": "Martinez",
+    "Email": "federico.martinez@example.com",
+    "Edad": 34,
+    "DNI": 36845297,
+    "Genero": "M"
+  },
+  {
+    "Id": 14,
+    "Nombre": "Rocio",
+    "Apellido": "Vega",
+    "Email": "rocio.vega@example.com",
+    "Edad": 26,
+    "DNI": 42987654,
+    "Genero": "F"
+  },
+  {
+    "Id": 15,
+    "Nombre": "Juan",
+    "Apellido": "Cruz",
+    "Email": "juan.cruz@example.com",
+    "Edad": 30,
+    "DNI": 38452971,
+    "Genero": "M"
+  },
+  {
+    "Id": 16,
+    "Nombre": "Micaela",
+    "Apellido": "Serrano",
+    "Email": "micaela.serrano@example.com",
+    "Edad": 24,
+    "DNI": 43369872,
+    "Genero": "F"
+  },
+  {
+    "Id": 17,
+    "Nombre": "Ezequiel",
+    "Apellido": "Cordoba",
+    "Email": "ezequiel.cordoba@example.com",
+    "Edad": 32,
+    "DNI": 37568412,
+    "Genero": "M"
+  },
+  {
+    "Id": 18,
+    "Nombre": "Sol",
+    "Apellido": "Ferreyra",
+    "Email": "sol.ferreyra@example.com",
+    "Edad": 22,
+    "DNI": 44875213,
+    "Genero": "F"
+  },
+  {
+    "Id": 19,
+    "Nombre": "Matias",
+    "Apellido": "Juarez",
+    "Email": "matias.juarez@example.com",
+    "Edad": 37,
+    "DNI": 34258961,
+    "Genero": "M"
+  },
+  {
+    "Id": 20,
+    "Nombre": "Victoria",
+    "Apellido": "Morales",
+    "Email": "victoria.morales@example.com",
+    "Edad": 28,
+    "DNI": 41987546,
+    "Genero": "F"
+  },
+  {
+    "Id": 21,
+    "Nombre": "Diego",
+    "Apellido": "Roldan",
+    "Email": "diego.roldan@example.com",
+    "Edad": 39,
+    "DNI": 32859476,
+    "Genero": "M"
+  },
+  {
+    "Id": 22,
+    "Nombre": "Julieta",
+    "Apellido": "Castro",
+    "Email": "julieta.castro@example.com",
+    "Edad": 25,
+    "DNI": 43569821,
+    "Genero": "F"
+  },
+  {
+    "Id": 23,
+    "Nombre": "Tomas",
+    "Apellido": "Ledesma",
+    "Email": "tomas.ledesma@example.com",
+    "Edad": 29,
+    "DNI": 38974512,
+    "Genero": "M"
+  },
+  {
+    "Id": 24,
+    "Nombre": "Paula",
+    "Apellido": "Sanchez",
+    "Email": "paula.sanchez@example.com",
+    "Edad": 27,
+    "DNI": 41236598,
+    "Genero": "F"
+  },
+  {
+    "Id": 25,
+    "Nombre": "Lionel",
+    "Apellido": "Benitez",
+    "Email": "lionel.benitez@example.com",
+    "Edad": 41,
+    "DNI": 31987426,
+    "Genero": "M"
+  },
+  {
+    "Id": 26,
+    "Nombre": "Milagros",
+    "Apellido": "Ponce",
+    "Email": "milagros.ponce@example.com",
+    "Edad": 20,
+    "DNI": 45236987,
+    "Genero": "F"
+  },
+  {
+    "Id": 27,
+    "Nombre": "Sebastian",
+    "Apellido": "Nuñez",
+    "Email": "sebastian.nunez@example.com",
+    "Edad": 33,
+    "DNI": 36789452,
+    "Genero": "M"
+  },
+  {
+    "Id": 28,
+    "Nombre": "Ana",
+    "Apellido": "Farias",
+    "Email": "ana.farias@example.com",
+    "Edad": 24,
+    "DNI": 44478526,
+    "Genero": "F"
+  },
+  {
+    "Id": 29,
+    "Nombre": "Franco",
+    "Apellido": "Ibarra",
+    "Email": "franco.ibarra@example.com",
+    "Edad": 32,
+    "DNI": 37984521,
+    "Genero": "M"
+  },
+  {
+    "Id": 30,
+    "Nombre": "Elena",
+    "Apellido": "Quiroga",
+    "Email": "elena.quiroga@example.com",
+    "Edad": 26,
+    "DNI": 42658974,
+    "Genero": "X"
+  }
+]

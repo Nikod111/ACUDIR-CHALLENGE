@@ -16,7 +16,7 @@ function App() {
                 <Route path="/" element={<Personas />} />
                 <Route path="/agregar" element={<AgregarPersona />} />
                 <Route
-                    path="/EditarPersona/:id/:nombre/:apellido/:email/:edad"
+                    path="/EditarPersona/:id/:nombre/:apellido/:email/:edad/:dni/:genero"
                     element={<EditarPersona />}
                 />
             </Routes>

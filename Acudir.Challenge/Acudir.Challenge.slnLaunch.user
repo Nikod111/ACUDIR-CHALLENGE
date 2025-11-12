@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "Web\\Acudir.Web.esproj",
+        "Path": "Acudir.Web\\Acudir.Web.esproj",
         "Action": "Start"
       }
     ]
