@@ -13,6 +13,7 @@ Para el funcionamiento de la App se precisa que el archivo `Acudir.Infrastructur
 Iniciar Visual Studio, click derecho en la solución **Acudir.Challenge** -> Configurar proyectos de inicio y seleccionar:
 
 **Acudir.Api**
+
 **Acudir.Web** (React)
 
 Luego **Iniciar**
