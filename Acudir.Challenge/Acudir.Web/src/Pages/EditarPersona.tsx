@@ -108,6 +108,7 @@ export default function EditarPersona() {
                     value={form.nombre}
                     onChange={handleChange}
                     required
+                    maxLength={50}
                 />
 
     
@@ -122,6 +123,7 @@ export default function EditarPersona() {
                     value={form.apellido}
                     onChange={handleChange}
                     required
+                    maxLength={50}
                 />
 
                 <label htmlFor="email" className="block text-sm font-medium mb-1">
@@ -135,6 +137,7 @@ export default function EditarPersona() {
                     value={form.email}
                     onChange={handleChange}
                     required
+                    maxLength={50}
                 />
  
                 <label htmlFor="edad" className="block text-sm font-medium mb-1">
@@ -144,11 +147,13 @@ export default function EditarPersona() {
                 <input
                     id="edad"
                     name="edad"
-                    type="number"
+                    type="text"
+                    pattern="\d{2,3}"
                     className="block w-1/4 mx-auto p-2 border rounded mb-3"
                     value={form.edad}
                     onChange={handleChange}
                     required
+                    maxLength={3}
                 />
 
                 <label htmlFor="dni" className="block text-sm font-medium mb-1">
@@ -157,11 +162,13 @@ export default function EditarPersona() {
                 <input
                     id="dni"
                     name="dni"
-                    type="number"
+                    type="text"
+                    pattern="\d{7,8}"
                     className="block w-1/4 mx-auto p-2 border rounded"
                     value={form.dni}
                     onChange={handleChange}
                     required
+                    maxLength={8}
                 />
 
                 <label htmlFor="genero" className="block text-sm font-medium mb-1">

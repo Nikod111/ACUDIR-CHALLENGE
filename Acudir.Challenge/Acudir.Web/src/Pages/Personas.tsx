@@ -70,6 +70,7 @@ export default function Personas() {
                     value={nombreFiltro}
                     onChange={(e) => setNombreFiltro(e.target.value)}
                     className="border rounded"
+                    maxLength={50}
                 />
                 <input
                     type="text"
@@ -77,6 +78,7 @@ export default function Personas() {
                     value={apellidoFiltro}
                     onChange={(e) => setApellidoFiltro(e.target.value)}
                     className="border rounded"
+                    maxLength={50}
                 />
                 <input
                     type="email"
@@ -84,6 +86,7 @@ export default function Personas() {
                     value={mailFiltro}
                     onChange={(e) => setMailFiltro(e.target.value)}
                     className="border rounded"
+                    maxLength={50}
                 />
                 <input
                     type="number"
@@ -91,6 +94,7 @@ export default function Personas() {
                     value={edadFiltro}
                     onChange={(e) => setEdadFiltro(e.target.value)}
                     className="border rounded"
+                    maxLength={50}
                 />
 
                 <input
@@ -99,6 +103,7 @@ export default function Personas() {
                     value={dniFiltro}
                     onChange={(e) => setDniFiltro(e.target.value)}
                     className="border rounded"
+                    maxLength={8}
                 />
 
                 <select
