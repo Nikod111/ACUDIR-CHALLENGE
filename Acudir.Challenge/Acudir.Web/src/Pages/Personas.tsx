@@ -69,28 +69,28 @@ export default function Personas() {
                     placeholder="Filtrar por nombre"
                     value={nombreFiltro}
                     onChange={(e) => setNombreFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded mx-2"
+                    className="border rounded"
                 />
                 <input
                     type="text"
                     placeholder="Filtrar por apellido"
                     value={apellidoFiltro}
                     onChange={(e) => setApellidoFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded mx-2"
+                    className="border rounded"
                 />
                 <input
                     type="email"
                     placeholder="Filtrar por mail"
                     value={mailFiltro}
                     onChange={(e) => setMailFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded mx-2"
+                    className="border rounded"
                 />
                 <input
                     type="number"
                     placeholder="Filtrar por edad"
                     value={edadFiltro}
                     onChange={(e) => setEdadFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded mx-2"
+                    className="border rounded"
                 />
 
                 <input
@@ -98,26 +98,25 @@ export default function Personas() {
                     placeholder="Filtrar por DNI"
                     value={dniFiltro}
                     onChange={(e) => setDniFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded mx-2"
+                    className="border rounded"
                 />
 
                 <select
                     value={sexoFiltro}
                     onChange={(e) => setSexoFiltro(e.target.value)}
-                    className="flex-1 p-2 border rounded mx-2"
+                    className=""
                 >
                     <option value="">Genero</option>
                     <option value="M">M</option>
                     <option value="F">F</option>
                     <option value="X">X</option>
                 </select>
-
                 <button
                     onClick={obtenerPersonas}
-                    className="btn btn-primary"
+                    className="btn btn-primary ms-auto d-block mx-3"
                 >
                     Buscar
-                </button>
+                    </button>
             </div>
 
             {/* Tabla */}
